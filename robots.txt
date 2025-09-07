@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /login/
 Allow: /
 
-Sitemap: https://sarmat-site.netlify.app/sitemap.xml
+Sitemap: https://sarmatsite.netlify.app/sitemap.xml
