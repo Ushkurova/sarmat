@@ -1,15 +1,43 @@
-# netlify.toml
+# 📌 Основные настройки сборки
 [build]
-  publish = "public" # укажи папку, где лежит твой сайт (например public, dist или build)
+  publish = "public" # замени на папку, где у тебя лежит собранный сайт (например dist, build и т.д.)
 
-# Настройка для sitemap.xml
+# 📌 Sitemap с правильным типом
 [[headers]]
 for = "/sitemap.xml"
   [headers.values]
   Content-Type = "application/xml; charset=UTF-8"
 
-# Настройка для robots.txt
+# 📌 Robots.txt с правильным типом
 [[headers]]
 for = "/robots.txt"
   [headers.values]
   Content-Type = "text/plain; charset=UTF-8"
+
+# 📌 Принудительно HTTPS
+[[redirects]]
+  from = "http://sarmatsite.netlify.app/*"
+  to = "https://sarmatsite.netlify.app/:splat"
+  status = 301
+  force = true
+
+# 📌 SEO — базовые security-заголовки
+[[headers]]
+for = "/*"
+  [headers.values]
+  X-Content-Type-Options = "nosniff"
+  X-Frame-Options = "DENY"
+  X-XSS-Protection = "1; mode=block"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 📌 SEO — кэширование статичных файлов
+[[headers]]
+for = "/assets/*"
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+# 📌 Gzip / Brotli сжатие (Netlify делает сам, но включим явно)
+[[headers]]
+for = "/*"
+  [headers.values]
+  Content-Encoding = "br, gzip"
