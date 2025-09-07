@@ -1,0 +1,54 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(181, 225, 244);
+    overflow-x: hidden;
+}
+
+.f .fo{
+    
+    height: 85vh;
+}
+
+#bf{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bott{
+    width: 100vw;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.bott img{
+    width: 5vw;
+    margin-bottom:2vh;
+}
+
+video{
+    display: none;
+    width: 60vw;
+    height: 77vh;
+}
+
+@media (max-width: 599px){
+.k{
+    display: none;
+}
+    
+.bott img{
+    width: 22vw;
+}
+
+video{
+    width: 77vw;
+}
+
+}
