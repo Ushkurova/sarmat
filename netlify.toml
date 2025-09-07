@@ -1,0 +1,15 @@
+# netlify.toml
+[build]
+  publish = "public" # укажи папку, где лежит твой сайт (например public, dist или build)
+
+# Настройка для sitemap.xml
+[[headers]]
+for = "/sitemap.xml"
+  [headers.values]
+  Content-Type = "application/xml; charset=UTF-8"
+
+# Настройка для robots.txt
+[[headers]]
+for = "/robots.txt"
+  [headers.values]
+  Content-Type = "text/plain; charset=UTF-8"
