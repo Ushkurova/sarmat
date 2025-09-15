@@ -18,13 +18,46 @@ body{
     overflow-x: hidden;
 }
 
+.s1{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.s1 img{
+    width: 15vw;
+    margin-top: 1vw;
+}
+
+
 .sar{
-    width: 100vw;
-    text-align: center;
-    font-size: 9vw;
+    text-align: left;
+    font-size: 3vw;
     color: #2a3843;
     font-family: fairy, sans-serif;
-    margin-top: 2vw;
+    margin-top: -2vw;
+    margin-left:2vw ;
+}
+
+.s2{
+    position: absolute;
+    right: 4vw;
+    top: 8vw;
+}
+
+.s2 img{
+    width: 20vw;
+}
+
+.s3{
+    position: absolute;    
+    bottom: 10.57vw;
+    left: 1.50vw;
+}
+
+.s3 img{
+    width: 12vw;
+
 }
 
 .contact{
@@ -107,6 +140,16 @@ body{
     text-shadow: 0 0 15px white;
 }
 
+.b{
+    position: absolute;
+    right: 2vw;
+    top: 5vh;
+}
+
+.b img{
+    width: 40.56vw;
+}
+
 
 @media (max-width: 599px) {
 
@@ -114,17 +157,32 @@ body{
     margin-bottom: 5vh;
 }
 
-
+.s2{
+    top: 22vh;
+}
 
   .sar{
-    font-size: 20vw;
-    margin-top: 9.50vh;
+    font-size: 5vw;
+    top: 20vh;
+    position: absolute;
+    right: -79vw;
   }
   .cont{
 
     flex-direction: column;
 
   }
+
+  .b{
+    right: 0vw;
+    top: 35vh;
+    width: 90vw;
+}
+
+.b img{
+    width: 80vw;
+}
+
 
   .menuv{
     width: 70vw;
@@ -146,7 +204,10 @@ body{
 .t{
     font-size: 4.9vw;
     margin-bottom: 24vh;
+    margin-top: 12.13vh;
 }
+
+
 
 .contact{
     padding-top: 5vh;
@@ -176,6 +237,7 @@ button{
 
 header{
     z-index:15;
+    margin-bottom: 4vw;
 }
 
 #language-dropdown {
