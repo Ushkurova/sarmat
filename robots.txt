@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sarmatsite.netlify.app/sitemap.xml
+Sitemap: https://sarmat.it.com/sitemap.xml
