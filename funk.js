@@ -52,7 +52,7 @@ const languageNames = {
 
   function updateLanguageOptions() {
     const dropdown = document.getElementById("language-dropdown");
-    const useShort = window.innerWidth <= 500;
+    const useShort = window.innerWidth <= 700;
     const names = useShort ? languageNames.short : languageNames.full;
 
     Array.from(dropdown.options).forEach(option => {
@@ -63,6 +63,6 @@ const languageNames = {
     else
       kt=1;
   }
-
+updateLanguageOptions();
   window.addEventListener("resize", updateLanguageOptions);
   window.addEventListener("DOMContentLoaded", updateLanguageOptions);
